@@ -1,6 +1,8 @@
+'use client';
+
 import { Fragment } from 'react';
 import styled from 'styled-components';
-import { users, gameGroups } from '@/lib/TestData';
+import { users, gameGroups } from '@/lib/testData';
 
 const Layout = styled.div`
   display: flex;
@@ -17,9 +19,9 @@ const Title = styled.h1`
 
 const Body = styled.div``;
 
-const PredictionGroups = styled.div<{ length: number }>`
+const PredictionGroups = styled.div<{ $length: number }>`
   display: grid;
-  grid-template-columns: ${({ length }) => `repeat(${length}, 1fr)`};
+  grid-template-columns: ${({ $length }) => `repeat(${$length}, 1fr)`};
   grid-gap: 8px;
 `;
 
@@ -41,7 +43,7 @@ export default function Home() {
       <Page>
         <Title>Predictions</Title>
         <Body>
-          <PredictionGroups length={users.length + 4}>
+          <PredictionGroups $length={users.length + 4}>
             {gameGroups.map((group) => (
               <Fragment key={group.name}>
                 <Group>{group.name}</Group>
