@@ -3,5 +3,5 @@ export default function TestLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div>Test{children}</div>;
+  return <div>Layout Test{children}</div>;
 }
