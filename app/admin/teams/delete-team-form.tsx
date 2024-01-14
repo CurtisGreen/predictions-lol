@@ -2,6 +2,7 @@
 
 import { useFormState, useFormStatus } from 'react-dom';
 import { deleteTeamAction } from './team-actions';
+import { Button } from '@/components/button';
 
 const initialState = {
   message: '',
@@ -11,9 +12,9 @@ function DeleteButton() {
   const { pending } = useFormStatus();
 
   return (
-    <button type='submit' aria-disabled={pending}>
+    <Button type='submit' aria-disabled={pending}>
       Delete
-    </button>
+    </Button>
   );
 }
 
