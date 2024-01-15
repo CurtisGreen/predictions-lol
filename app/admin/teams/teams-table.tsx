@@ -4,7 +4,7 @@ import { Team } from '@/types';
 import Image from 'next/image';
 import { Fragment } from 'react';
 import styled from 'styled-components';
-import { DeleteTeamForm } from './delete-team-form';
+import { DeleteTeamButton } from './delete-team-form';
 
 const Grid = styled.div`
   display: grid;
@@ -57,7 +57,7 @@ export function TeamsTable({ teams }: { teams: Team[] }) {
           >
             {team.secondary_color}
           </Color>
-          <DeleteTeamForm id={team.id} />
+          <DeleteTeamButton id={team.id} />
         </Fragment>
       ))}
     </Grid>

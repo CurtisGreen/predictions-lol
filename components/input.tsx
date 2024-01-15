@@ -8,8 +8,8 @@ const StyledInput = styled.input`
   padding: 4px;
 `;
 
-type InputProps = JSX.IntrinsicElements['input'];
+type Props = JSX.IntrinsicElements['input'];
 
-export function Input({ ...props }: InputProps) {
+export function Input({ ...props }: Props) {
   return <StyledInput {...props} />;
 }

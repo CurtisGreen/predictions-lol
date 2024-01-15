@@ -9,6 +9,8 @@ const StyledButton = styled.button`
   font-size: 16px;
 `;
 
-export function Button({ ...props }) {
+type Props = JSX.IntrinsicElements['button'];
+
+export function Button({ ...props }: Props) {
   return <StyledButton {...props} />;
 }
